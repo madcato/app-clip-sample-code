@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vvs-Zz-qjn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BpO-CO-ToC">
+            <objects>
+                <viewController id="Vvs-Zz-qjn" customClass="ViewController" customModule="app_clip_sample_code" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Zk-dy-MV1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here the code and tap generate QR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8K-Ph-XDK">
+                                <rect key="frame" x="87" y="94" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-px-GAz">
+                                <rect key="frame" x="20" y="136" width="374" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="yLF-1f-uPr"/>
+                                </constraints>
+                                <state key="normal" title="Generate QR"/>
+                                <connections>
+                                    <action selector="generateQRTapped:" destination="Vvs-Zz-qjn" eventType="touchUpInside" id="jEq-Vt-A8L"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-4U-7zF">
+                                <rect key="frame" x="87" y="212" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="c4o-rh-jhT"/>
+                                    <constraint firstAttribute="width" constant="240" id="cYd-Zy-s98"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mzZ-px-GAz" firstAttribute="top" secondItem="E8K-Ph-XDK" secondAttribute="bottom" constant="8" id="EHH-R4-r3T"/>
+                            <constraint firstItem="zQq-lh-cqB" firstAttribute="trailing" secondItem="E8K-Ph-XDK" secondAttribute="trailing" constant="87" id="afE-bD-2sc"/>
+                            <constraint firstItem="zQq-lh-cqB" firstAttribute="trailing" secondItem="mzZ-px-GAz" secondAttribute="trailing" constant="20" id="f3l-q8-bTb"/>
+                            <constraint firstItem="E8K-Ph-XDK" firstAttribute="top" secondItem="zQq-lh-cqB" secondAttribute="top" constant="50" id="htQ-yI-YDI"/>
+                            <constraint firstItem="pfS-4U-7zF" firstAttribute="top" secondItem="mzZ-px-GAz" secondAttribute="bottom" constant="8" id="iC5-bm-oib"/>
+                            <constraint firstItem="pfS-4U-7zF" firstAttribute="leading" secondItem="E8K-Ph-XDK" secondAttribute="leading" id="jhp-DR-WcZ"/>
+                            <constraint firstItem="mzZ-px-GAz" firstAttribute="leading" secondItem="zQq-lh-cqB" secondAttribute="leading" constant="20" id="rgu-V3-MBr"/>
+                            <constraint firstItem="pfS-4U-7zF" firstAttribute="centerX" secondItem="3Zk-dy-MV1" secondAttribute="centerX" id="s0W-PG-d3b"/>
+                            <constraint firstItem="pfS-4U-7zF" firstAttribute="trailing" secondItem="E8K-Ph-XDK" secondAttribute="trailing" id="sgg-b5-ow5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zQq-lh-cqB"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="E8K-Ph-XDK" id="8Q5-iZ-PFg"/>
+                        <outlet property="qrImage" destination="pfS-4U-7zF" id="sgw-gA-a4y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjG-N4-Rnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+</document>
