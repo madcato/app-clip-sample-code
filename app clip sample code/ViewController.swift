@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     }
 
   @IBAction func generateQRTapped(_ sender: Any) {
-    let image = generateQRCode(from: codeTextField.text ?? "")
+    let urlStr = "appclips:org.veladan.code-shower?\(codeTextField.text ?? "")"
+    let image = generateQRCode(from: urlStr)
     qrImage.image = image
   }
 
